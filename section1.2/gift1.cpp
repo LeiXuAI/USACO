@@ -22,16 +22,15 @@ int get_idx(string name, vector<string> name_list){
 
 int main(){
 
-    ifstream fin("gift1.in");
-    ofstream fout("gift1.out");
-
+    ifstream fin ("gift1.in");
+    ofstream fout ("gift1.out");
+      
     int num_person, val_left, val_gived, num_receiver;
     string giver, receiver;
     vector<string> persons;
-
     fin >> num_person;
-    vector<int> val_final(num_person, 0);
-
+    vector<int> val_final(num_person, 0);  
+    
     for (int i = 0; i < num_person; i++){
         
         string each_person;
@@ -52,10 +51,10 @@ int main(){
 
     }
 
-    for (int i = 0; i < num_person; ++i){
+    for (int i = 0; i < num_person; i++){
 
-        cout << persons[i] << " " << val_final[i] << endl;
+        fout << persons[i] << " " << val_final[i] << endl;
     }
-    exit(0);
+    return 0;
 
 }
